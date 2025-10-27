@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>進階感官摹寫與AI協作指南</title>
+    <!-- 載入 Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 載入 Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f3e8; /* 淺米色背景 */
+        }
+        .night-market-bg {
+            background-color: #8b2b1a; /* 夜市主題色：深紅 */
+        }
+        .text-night-market {
+            color: #ff9900; /* 招牌色：橘黃 */
+        }
+        .card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            border-radius: 12px;
+        }
+        .sensory-icon {
+            font-size: 1.5rem;
+            color: #8b2b1a;
+        }
+        .container-padding {
+            padding: 1rem;
+        }
+        @media (min-width: 640px) {
+            .container-padding {
+                padding: 2rem;
+            }
+        }
+        .prompt-example-block {
+            background-color: #f0f4f8; /* 淺藍灰背景 */
+            padding: 1rem;
+            border-radius: 6px;
+            border: 1px solid #cceeff;
+        }
+        .prompt-text {
+            background-color: #ffffff;
+            color: #1f2937;
+            padding: 0.75rem;
+            font-family: monospace;
+            font-size: 0.875rem; /* text-sm */
+            border-radius: 4px;
+            white-space: pre-wrap; /* 保持換行和空白，但允許自動換行 */
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <header class="night-market-bg text-white shadow-xl">
+        <div class="container-padding mx-auto max-w-4xl text-center">
+            <h1 class="text-3xl font-bold mb-1 tracking-wider">
+                <i class="fas fa-file-invoice text-night-market mr-2"></i>夜市美食進階感官摹寫指南
+            </h1>
+            <p class="text-sm opacity-90">大學寫作：數位工具與文學修辭的深度整合</p>
+        </div>
+    </header>
+
+    <main class="container-padding mx-auto max-w-4xl space-y-8">
+        
+        <!-- 導言與教學目標 -->
+        <section class="p-6 bg-white card">
+            <h2 class="text-2xl font-semibold mb-3 text-night-market border-b border-orange-200 pb-2">
+                教學目標：從描寫到建構意象
+            </h2>
+            <p class="text-gray-700 leading-relaxed">
+                本指引旨在協助大學生將美食寫作提升至文學層次。我們不僅要學會記錄「五感」，更要學會運用「通感」與「修辭」來創造多重感官的豐富意象，並將 AI 工具視為提升修辭密度與突破寫作瓶頸的**協作夥伴**。
+            </p>
+        </section>
+
+        <!-- 模組一：五感與通感的深度解析 -->
+        <section class="p-6 bg-white card">
+            <h2 class="text-2xl font-semibold mb-3 text-night-market border-b border-orange-200 pb-2">
+                模組一：五感與通感的深度解析
+            </h2>
+
+            <!-- 基礎五感 -->
+            <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800"><i class="fas fa-medal mr-2 text-yellow-600"></i>1. 基礎五感：細節的放大鏡</h3>
+            <div class="space-y-3">
+                <p class="p-2 bg-red-50 rounded-lg text-sm"><span class="font-bold text-red-700">視覺 (Sight)：</span> 捕捉瞬逝的「動態美」與「光影戲劇性」。不僅是色彩，更是油煙的氤氳、熱氣的扭曲、招牌燈的反光、醬汁在肉上的緩慢滴落。</p>
+                <p class="p-2 bg-yellow-50 rounded-lg text-sm"><span class="font-bold text-yellow-700">聽覺 (Sound)：</span> 描述「情境音」與「食物音」的交織。鐵板上翻炒的「急促嘶吼」、炸物入鍋的「熱烈慶典」，以及夜市人聲的「模糊背景樂」。</p>
+                <p class="p-2 bg-green-50 rounded-lg text-sm"><span class="font-bold text-green-700">嗅覺 (Smell)：</span> 區分「主香」與「底香」。濃烈的蒜蓉是主香，而底層木炭的煙燻味、或是雨後地面的濕氣，則是構成夜市氣味的底香。</p>
+                <p class="p-2 bg-blue-50 rounded-lg text-sm"><span class="font-bold text-blue-700">觸覺/口感 (Touch & Texture)：</span> 描述「物理狀態」與「口腔體驗」。除了冷熱，更要細寫食物對口腔肌肉的回饋：是**彈牙的韌性**、**砂紙般的粗礪**、還是**絲絨般的滑順**。</p>
+                <p class="p-2 bg-purple-50 rounded-lg text-sm"><span class="font-bold text-purple-700">味覺 (Taste)：</span> 追求「層次感」。描述味道在舌尖的「起承轉合」：初入口的酸澀，中段的醇厚回甘，以及最後留下的餘韻（例如薑片的辛辣退場）。</p>
+            </div>
+
+            <!-- 通感進階 -->
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-800"><i class="fas fa-brain mr-2 text-night-market"></i>2. 進階技巧：跨界通感 (Synesthesia)</h3>
+            <div class="p-4 bg-red-100 border-l-4 border-night-market rounded-lg text-gray-700">
+                <p class="font-medium mb-2">通感是指將不同感官的感受聯繫起來，用屬於A感的詞彙去描寫B感，創造出奇特的文學效果。</p>
+                <ul class="list-disc list-inside ml-4 text-sm space-y-1">
+                    <li><span class="font-bold">例一 (聽覺 -> 觸覺)：</span> 沸騰的油鍋發出「粗糙的」嘶嘶聲，像一把砂紙在耳邊摩擦。</li>
+                    <li><span class="font-bold">例二 (嗅覺 -> 視覺)：</span> 甜膩的烤肉醬氣味「染上了」金黃的色彩，在空氣中緩慢流淌。</li>
+                    <li><span class="font-bold">例三 (味覺 -> 聽覺)：</span> 一口咬下，爆漿的鹹蛋黃在舌尖演奏出「高亢尖銳」的鹹味。</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 模組二：AI作為概念擴展工具 -->
+        <section class="p-6 bg-white card">
+            <h2 class="text-2xl font-semibold mb-3 text-night-market border-b border-orange-200 pb-2">
+                模組二：AI 寫作：指令工程與修辭增幅
+            </h2>
+            <p class="text-gray-700 mb-4">
+                與其讓 AI 寫完一整段，更有效的方法是將其當作專門的「修辭增幅器」，為你正在寫作的特定句子生成靈感。
+            </p>
+
+            <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800"><i class="fas fa-rocket mr-2 text-blue-600"></i>AI 進階指令策略 (Prompt Engineering)</h3>
+            
+            <div class="space-y-6">
+                <!-- 策略 1: 專攻譬喻與轉化 -->
+                <div class="p-4 bg-gray-50 rounded-lg border">
+                    <p class="font-bold mb-1 text-night-market">策略 1: 專攻譬喻 (Metaphor/Simile) 與轉化 (Personification)</p>
+                    <p class="text-sm text-gray-700 mb-2">鎖定一個感官細節，要求 AI 提供三種修辭手法，讓你從中選擇。</p>
+                    <div class="prompt-example-block">
+                        <p class="font-semibold text-sm text-red-700 mb-1 border-b border-red-200 pb-1">指令範例</p>
+                        <pre class="prompt-text">
+請為「烤玉米的刷醬聲」這個聽覺細節，生成一個明喻句、一個隱喻句和一個擬人句。
+                        </pre>
+                    </div>
+                </div>
+
+                <!-- 策略 2: 情感逆向工程 -->
+                <div class="p-4 bg-gray-50 rounded-lg border">
+                    <p class="font-bold mb-1 text-night-market">策略 2: 情感逆向工程 (Reverse Emotion Mapping)</p>
+                    <p class="text-sm text-gray-700 mb-2">從抽象的情感出發，要求 AI 找出匹配的感官細節，幫助寫作切入主題。</p>
+                    <div class="prompt-example-block">
+                        <p class="font-semibold text-sm text-red-700 mb-1 border-b border-red-200 pb-1">指令範例</p>
+                        <pre class="prompt-text">
+如果要表達「童年失落與懷舊」的氛圍，請列出描述「車輪餅」時，可以在五感中使用的三種細節。
+                        </pre>
+                    </div>
+                </div>
+
+                <!-- 策略 3: 詞彙密度提升 -->
+                <div class="p-4 bg-gray-50 rounded-lg border">
+                    <p class="font-bold mb-1 text-night-market">策略 3: 詞彙密度提升 (Lexical Density Boost)</p>
+                    <p class="text-sm text-gray-700 mb-2">針對一個平庸的形容詞或動詞，要求 AI 提供一組更具畫面感的同義詞。</p>
+                    <div class="prompt-example-block">
+                        <p class="font-semibold text-sm text-red-700 mb-1 border-b border-red-200 pb-1">指令範例</p>
+                        <pre class="prompt-text">
+請提供五個比「Q彈」更具體、更高級的詞彙，用來描寫粉圓的嚼勁。
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 模組三：提問技巧與深度探究 -->
+        <section class="p-6 bg-white card">
+            <h2 class="text-2xl font-semibold mb-3 text-night-market border-b border-orange-200 pb-2">
+                模組三：提問技巧與深度探究
+            </h2>
+            <p class="text-gray-700 mb-4">
+                提問是將單純的「描述」提升為「分析」或「敘事」的關鍵。透過追問，你能挖掘出美食背後的文化、工藝與情感連結。
+            </p>
+
+            <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800"><i class="fas fa-question-circle mr-2 text-green-600"></i>三大追問策略</h3>
+            <div class="space-y-4">
+                <!-- 提問策略 1: Why Questions -->
+                <div class="p-4 bg-green-50 rounded-lg border border-green-200">
+                    <p class="font-bold mb-1 text-green-800">1. 因果追問 (Why Questions)：挖掘工藝與文化根源</p>
+                    <p class="text-sm text-gray-700 mb-2">將感官的「結果」追溯到「原因」，適用於探討做法或配方。</p>
+                    <ul class="list-disc list-inside ml-4 text-sm space-y-1">
+                        <li><span class="font-bold">從味覺：</span> 為什麼這塊雞排吃起來有淡淡的芋頭香氣？（引導出：醃料配方、食材產地）</li>
+                        <li><span class="font-bold">從觸覺：</span> 為什麼這個粉圓嚼起來這麼耐磨，像橡皮筋一樣？（引導出：澱粉種類、熬煮時間）</li>
+                    </ul>
+                </div>
+
+                <!-- 提問策略 2: How Questions -->
+                <div class="p-4 bg-indigo-50 rounded-lg border border-indigo-200">
+                    <p class="font-bold mb-1 text-indigo-800">2. 過程追問 (How Questions)：聚焦動態與職人精神</p>
+                    <p class="text-sm text-gray-700 mb-2">將靜態的食物轉為動態的畫面，將寫作重心從「吃」轉向「製作」。</p>
+                    <ul class="list-disc list-inside ml-4 text-sm space-y-1">
+                        <li><span class="font-bold">從視覺：</span> 攤主是如何掌握火候，讓蔗汁在烤肉上呈現這種焦糖色光澤的？</li>
+                        <li><span class="font-bold">從聽覺：</span> 這種「吱吱」聲是從鐵板的哪個部分發出的？音調的變化代表什麼？</li>
+                    </ul>
+                </div>
+
+                <!-- 提問策略 3: So What Questions -->
+                <div class="p-4 bg-red-50 rounded-lg border border-red-200">
+                    <p class="font-bold mb-1 text-red-800">3. 意義追問 (So What Questions)：連結個人情感與社會脈絡</p>
+                    <p class="text-sm text-gray-700 mb-2">將食物與更宏大的主題連結，讓寫作擁有深度和哲思。</p>
+                    <ul class="list-disc list-inside ml-4 text-sm space-y-1">
+                        <li><span class="font-bold">從情感：</span> 這種味道對我而言，代表著什麼樣的童年回憶？它與離家出走的心情有何相似之處？</li>
+                        <li><span class="font-bold">從社會：</span> 這種庶民小吃如何反映了台灣過去經濟發展的某個階段？</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 class="text-lg font-semibold mt-4 text-night-market">AI 協作延伸：將提問轉化為 API 指令</h3>
+            <p class="text-sm text-gray-700 mt-2 p-3 bg-red-100 rounded-lg">
+                將「因果追問」與「過程追問」直接用於 AI 指令，可以要求 AI 模擬文化專家或工藝師的角度來回答，從而豐富你的背景知識，例如：<span class="font-semibold text-red-600">「請以一位擁有 30 年經驗的蚵仔煎師傅口吻，解釋如何讓粉漿在不厚重的情況下，保持 Q 彈的口感。」</span>
+            </p>
+        </section>
+
+        <!-- 模組四：AI 協作的陷阱與倫理考量 -->
+        <section class="p-6 bg-white card">
+            <h2 class="text-2xl font-semibold mb-3 text-night-market border-b border-orange-200 pb-2">
+                模組四：AI 協作的陷阱與倫理考量
+            </h2>
+            <p class="text-gray-700 mb-4">
+                AI 是一個強大的工具，但使用者必須保持批判性與警覺性。以下是利用 AI 進行感官摹寫時必須注意的幾個關鍵陷阱。
+            </p>
+
+            <div class="space-y-4">
+                <!-- 考量 1: 罐頭文危機 -->
+                <div class="p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                    <p class="font-bold mb-1 text-yellow-800"><i class="fas fa-exclamation-triangle mr-2"></i>陷阱一：失去個人聲音（The Generic Voice Trap）</p>
+                    <p class="text-sm text-gray-700">
+                        AI 傾向使用資料庫中最常見、最「安全」的詞彙組合。過度依賴 AI 生成的段落，會讓你的文章缺乏個人獨特的視角和情感，變成空泛的「罐頭文」。<br>
+                        <span class="font-semibold text-red-600">應對策略：</span> 永遠在 AI 初稿中**植入一個無法模仿的細節**（例如：你對氣味的特殊聯想、某個與食物有關的童年記憶、一個具體的店主互動）。
+                    </p>
+                </div>
+
+                <!-- 考量 2: 準確性與在地文化 -->
+                <div class="p-4 bg-teal-50 rounded-lg border border-teal-200">
+                    <p class="font-bold mb-1 text-teal-800"><i class="fas fa-map-marker-alt mr-2"></i>陷阱二：在地化錯誤與事實幻覺（Localization & Hallucination）</p>
+                    <p class="text-sm text-gray-700">
+                        夜市美食充滿地方差異和獨特配方（例如：北部甜辣醬與南部不同）。AI 可能會生成錯誤的在地資訊或虛構的製作過程。<br>
+                        <span class="font-semibold text-red-600">應對策略：</span> 使用 AI 提升修辭，但必須**對所有食材、工藝或文化背景的描述進行事實核查**。將 AI 視為創意發想家，而非百科全書。
+                    </p>
+                </div>
+
+                <!-- 考量 3: 情感的深度 -->
+                <div class="p-4 bg-pink-50 rounded-lg border border-pink-200">
+                    <p class="font-bold mb-1 text-pink-800"><i class="fas fa-heart-crack mr-2"></i>陷阱三：情感的「表演」而非「真實」（Simulated Emotion）</p>
+                    <p class="text-sm text-gray-700">
+                        AI 可以模擬出「感人」或「熱情」的語氣，但無法傳達真實的痛苦、渴望或滿足感。這種缺乏「人味」的寫作容易讓讀者產生距離感。<br>
+                        <span class="font-semibold text-red-600">應對策略：</span> 寫作時，先用自己的語言寫出**最原始、最直觀的感受**，再要求 AI 針對該句進行修辭美化，保留情感核心。
+                    </p>
+                </div>
+
+                <!-- 考量 4: 倫理與歸屬 -->
+                <div class="p-4 bg-gray-200 rounded-lg border border-gray-300">
+                    <p class="font-bold mb-1 text-gray-800"><i class="fas fa-book-open mr-2"></i>倫理考量：學術誠信與工具透明度</p>
+                    <p class="text-sm text-gray-700">
+                        在大學課程中，請務必遵守教授對於 AI 使用的規定。**在未經許可的情況下，切勿將 AI 生成的內容全部當作自己的原創作品提交。**<br>
+                        <span class="font-semibold text-red-600">建議：</span> 學習透明化。在作業中註明 AI 用於「修辭潤飾」或「詞彙擴展」，以維護學術誠信。
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 模組五：結構化整合與文學修訂 (新增) -->
+        <section class="p-6 bg-white card">
+            <h2 class="text-2xl font-semibold mb-3 text-night-market border-b border-orange-200 pb-2">
+                模組五：結構化整合與文學修訂
+            </h2>
+            <p class="text-gray-700 mb-4">
+                從 AI 獲取靈感後，下一步是將碎片化的文字，整合成一篇擁有強烈節奏感與連貫性的美食敘事。
+            </p>
+
+            <h3 class="text-xl font-semibold mt-4 mb-2 text-gray-800"><i class="fas fa-code-branch mr-2 text-purple-600"></i>1. 結構化整合：從點到線</h3>
+            <div class="p-4 bg-purple-50 rounded-lg border border-purple-200 text-gray-700">
+                <p class="font-medium mb-2 font-bold">整合技巧：</p>
+                <ul class="list-disc list-inside ml-4 text-sm space-y-1">
+                    <li><span class="font-bold">感官焦點輪轉：</span> 避免在同一句話中描述所有五感。理想的段落應該像鏡頭一樣，從宏觀的<span class="font-semibold">視覺</span>（夜市全景）開始，切換到微觀的<span class="font-semibold">聽覺</span>（油炸聲），最後聚焦於<span class="font-semibold">味覺</span>（咀嚼與回味）。</li>
+                    <li><span class="font-bold">建立銜接句：</span> 使用時間或邏輯連接詞（例如：「當視覺逐漸模糊時，嗅覺卻被猛烈地喚醒...」）來連結 AI 提供的不同感官詞彙。</li>
+                    <li><span class="font-bold">情感主軸：</span> 確保所有感官描述都服務於你在模組三中確定的情感或意義（So What），例如：若主軸是「熱鬧下的孤寂」，則所有聽覺描寫都應帶有疏離感。</li>
+                </ul>
+            </div>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-gray-800"><i class="fas fa-pen-fancy mr-2 text-red-600"></i>2. 文學修訂檢查清單</h3>
+            <p class="text-gray-700 mb-2 text-sm">在你完成初稿後，請使用以下清單對文章進行自我審查，確保其文學品質。</p>
+            <div class="space-y-2">
+                <div class="p-3 bg-red-100 rounded-lg">
+                    <p class="font-bold text-red-700 text-sm">修訂目標 I：修辭與密度</p>
+                    <ul class="list-disc list-inside ml-4 text-xs space-y-1">
+                        <li>檢查是否至少使用了兩個「通感」修辭？</li>
+                        <li>是否用 AI 提供的「高密度詞彙」替換了至少三個平庸的形容詞？</li>
+                        <li>段落開頭的句子是否足夠抓人，充滿畫面感？</li>
+                    </ul>
+                </div>
+                <div class="p-3 bg-green-100 rounded-lg">
+                    <p class="font-bold text-green-700 text-sm">修訂目標 II：節奏與音律</p>
+                    <ul class="list-disc list-inside ml-4 text-xs space-y-1">
+                        <li>文章中是否有長短句交錯？連續三個以上的句子是否都結構相似？（應調整）</li>
+                        <li>讀出聲來，句子是否順暢？是否有不必要的重複發音或拗口的詞彙組合？</li>
+                        <li>段落結尾是否留下「餘韻」，而非草草收場？</li>
+                    </ul>
+                </div>
+                <div class="p-3 bg-blue-100 rounded-lg">
+                    <p class="font-bold text-blue-700 text-sm">修訂目標 III：真實性與情感</p>
+                    <ul class="list-disc list-inside ml-4 text-xs space-y-1">
+                        <li>文章中是否有至少一處是 AI 無法生成、完全屬於你的獨特體驗或見解？</li>
+                        <li>五感描述是否平衡？是否過度集中在視覺或味覺？（應重新分配）</li>
+                        <li>你所表達的「情感」，是否透過描寫而非直接陳述來傳達？（避免使用「我感到很感動」等直白語句）</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 總結與學習路徑 -->
+        <section class="p-6 bg-white card border-t-2 border-night-market">
+            <h2 class="text-2xl font-semibold mb-3 text-night-market"><i class="fas fa-graduation-cap mr-2"></i>總結：從模仿到超越</h2>
+            <p class="text-gray-700 leading-relaxed">
+                撰寫感官摹寫的最終目標，是將 AI 視為提高效率的工具，但最終的風格、情感與獨特性，仍必須由您親自注入。請利用這些進階技巧，讓您的夜市美食寫作，不再只是食物清單，而是充滿生命力的文學作品。
+            </p>
+        </section>
+
+    </main>
+</body>
+</html>
